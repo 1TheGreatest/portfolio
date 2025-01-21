@@ -1,9 +1,10 @@
-import { RainbowButton } from "@/components/ui/rainbow-button";
+import BentoDemo from "@/components/bento-view";
+// import { RainbowButton } from "@/components/ui/rainbow-button";
 
 export default function Home() {
   return (
-    <div>
-      <RainbowButton>Get Unlimited Access</RainbowButton>
-    </div>
+    <>
+      <BentoDemo />
+    </>
   );
 }
