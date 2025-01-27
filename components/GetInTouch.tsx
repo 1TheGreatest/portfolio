@@ -1,15 +1,13 @@
 import React from "react";
-import { useScrollContext } from "./scroll-context";
+// import { useScroll, useScrollContext } from "./scroll-context";
 import Image from "next/image";
 
 const GetInTouch = () => {
-  const sectionRefs = useScrollContext();
+  //   const sectionRefs = useScrollContext();
+  //   const { scrollTo } = useScroll();
 
   return (
-    <section
-      ref={sectionRefs.GetInTouch}
-      className="w-full h-[96vh] bg-pageblack"
-    >
+    <section id="getInTouch" className="w-full h-[96vh] bg-pageblack">
       <div className="flex flex-col px-[27.7vw] py-[11.4vh]">
         <h1 className="font-extrabold text-4xl text-white mb-[1.5vh] text-center">
           Get In Touch

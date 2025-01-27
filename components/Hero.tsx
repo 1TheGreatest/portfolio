@@ -1,8 +1,7 @@
 import React from "react";
 import ClientLogo from "./client-logos";
 import Image from "next/image";
-import { useScrollContext } from "./scroll-context";
-// import { Link } from "react-scroll";
+import Lenis from "lenis";
 
 const clients = [
   { logo: "clickup.svg" },
@@ -13,14 +12,13 @@ const clients = [
 ];
 
 const Hero = () => {
-  const sectionRefs = useScrollContext();
-
-  const scrollToSection = (section: string) => {
-    sectionRefs[section]?.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+  // Initialize Lenis
+  const lenis = new Lenis();
+  const raf = (time: number) => {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
   };
+  requestAnimationFrame(raf);
 
   return (
     <section className="w-full h-[100vh] bg-pageblack">
@@ -31,19 +29,17 @@ const Hero = () => {
           <p className="hover:text-md hover:text-white">Testimonials</p>
           <p
             className="hover:text-md hover:text-white"
-            onClick={() => scrollToSection("Projects")}
+            onClick={() => lenis.scrollTo("#projects")}
           >
             Recent Work
           </p>
+
           <a
             className="hover:text-md hover:text-white"
-            onClick={() => scrollToSection("GetInTouch")}
+            onClick={() => lenis.scrollTo("#getInTouch")}
           >
             Get In Touch
           </a>
-          {/* <Link to="projects" smooth={true} duration={500}>
-            Section 1
-          </Link> */}
         </div>
         <div className="flex ml-[7.4vw] w-[8.4vw] h-[2.6vh] justify-between">
           <Image
