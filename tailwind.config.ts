@@ -13,6 +13,11 @@ export default {
         pageblack: "#080808",
         navcolor: "#1B1B1B",
         navfontcolor: "#9C9C9C",
+        formfontcolor: "#757575",
+        formfillcolor: "#F8F8F8",
+        formbordercolor: "#D8D8D8",
+        formbuttoncolor: "#3F8E00",
+        formbuttonbordercolor: "#62BA1B",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

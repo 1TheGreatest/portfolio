@@ -1,6 +1,8 @@
 import React from "react";
 import ClientLogo from "./client-logos";
 import Image from "next/image";
+import { useScrollContext } from "./scroll-context";
+// import { Link } from "react-scroll";
 
 const clients = [
   { logo: "clickup.svg" },
@@ -11,15 +13,37 @@ const clients = [
 ];
 
 const Hero = () => {
+  const sectionRefs = useScrollContext();
+
+  const scrollToSection = (section: string) => {
+    sectionRefs[section]?.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <section className="w-full h-[100vh] bg-pageblack">
       <div className="flex w-[86vw] ml-[6.6vw] h-[10vh] bg-navcolor rounded-b-lg mb-[11vh] items-center">
         <div className="flex ml-[7.4vw] w-[56vw] h-[2.6vh] text-navfontcolor text-sm justify-between">
-          <p>Home</p>
-          <p>Case Studies</p>
-          <p>Testimonials</p>
-          <p>Recent Work</p>
-          <p>Get In Touch</p>
+          <button className="hover:text-md hover:text-white">Home</button>
+          <p className="hover:text-md hover:text-white">Case Studies</p>
+          <p className="hover:text-md hover:text-white">Testimonials</p>
+          <p
+            className="hover:text-md hover:text-white"
+            onClick={() => scrollToSection("Projects")}
+          >
+            Recent Work
+          </p>
+          <a
+            className="hover:text-md hover:text-white"
+            onClick={() => scrollToSection("GetInTouch")}
+          >
+            Get In Touch
+          </a>
+          {/* <Link to="projects" smooth={true} duration={500}>
+            Section 1
+          </Link> */}
         </div>
         <div className="flex ml-[7.4vw] w-[8.4vw] h-[2.6vh] justify-between">
           <Image

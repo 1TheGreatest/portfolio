@@ -1,12 +1,20 @@
-import BentoDemo from "@/components/bento-view";
+"use client";
+import Experience from "@/components/Experience";
+import GetInTouch from "@/components/GetInTouch";
 import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
+import { ScrollProvider } from "@/components/scroll-context";
 // import { RainbowButton } from "@/components/ui/rainbow-button";
 
 export default function Home() {
   return (
-    <>
-      <Hero />
-      <BentoDemo />
-    </>
+    <ScrollProvider>
+      <>
+        <Hero />
+        <Experience />
+        <Projects />
+        <GetInTouch />
+      </>
+    </ScrollProvider>
   );
 }
