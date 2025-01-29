@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Lenis from "lenis";
+import { navItems } from "@/data";
 
 const Navbar = () => {
   // Initialize Lenis
@@ -13,34 +14,18 @@ const Navbar = () => {
   requestAnimationFrame(raf);
 
   return (
-    <section className="fixed w-full h-[10vh] bg-pageblack">
+    <section className="fixed w-full h-[10vh] bg-pageblack z-50">
       <div className="flex w-[86vw] ml-[6.6vw] h-[10vh] bg-navcolor rounded-b-lg items-center">
         <div className="flex ml-[7.4vw] w-[56vw] h-[2.6vh] text-navfontcolor text-sm justify-between">
-          <a
-            className="hover:text-md hover:text-white"
-            onClick={() => lenis.scrollTo("#hero")}
-          >
-            Home
-          </a>
-          <p className="hover:text-md hover:text-white">Expertise</p>
-          <a
-            className="hover:text-md hover:text-white"
-            onClick={() => lenis.scrollTo("#projects")}
-          >
-            Projects
-          </a>
-          <a
-            className="hover:text-md hover:text-white"
-            onClick={() => lenis.scrollTo("#experience")}
-          >
-            Experience
-          </a>
-          <a
-            className="hover:text-md hover:text-white"
-            onClick={() => lenis.scrollTo("#getInTouch")}
-          >
-            Get In Touch
-          </a>
+          {navItems.map((item, idx) => (
+            <a
+              key={idx}
+              className="hover:text-md hover:text-white"
+              onClick={() => lenis.scrollTo(item.id)}
+            >
+              {item.name}
+            </a>
+          ))}
         </div>
 
         <div className="flex ml-[7.4vw] w-[8.4vw] h-[2.6vh] justify-between">

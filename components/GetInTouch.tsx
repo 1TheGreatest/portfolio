@@ -41,7 +41,7 @@ const GetInTouch = () => {
           />
         </div>
         <div className="flex flex-col px-[8.6vw] ">
-          <button className="flex justify-center items-center h-[7.2vh]  rounded-sm bg-formbuttoncolor border border-formbuttonbordercolor gap-3">
+          <button className="flex justify-center items-center h-[7.2vh] rounded-sm bg-formbuttoncolor border border-formbuttonbordercolor gap-3">
             <p className="text-sm text-white font-bold">Submit</p>
             <Image
               src="/icons/forward.svg"
