@@ -1,17 +1,28 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import Lenis from "lenis";
 import { navItems } from "@/data";
 
 const Navbar = () => {
   // Initialize Lenis
-  const lenis = new Lenis();
-  const raf = (time: number) => {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  };
-  requestAnimationFrame(raf);
+  const lenisRef = useRef<Lenis | null>(null);
+
+  useEffect(() => {
+    // Initialize Lenis only on the client side
+    if (typeof window !== "undefined") {
+      lenisRef.current = new Lenis();
+      const raf = (time: number) => {
+        lenisRef.current?.raf(time);
+        requestAnimationFrame(raf);
+      };
+      requestAnimationFrame(raf);
+    }
+    // Clean up when the component unmounts
+    return () => {
+      lenisRef.current?.destroy();
+    };
+  }, []);
 
   return (
     <section className="fixed w-full h-[10vh] bg-pageblack z-50">
@@ -21,7 +32,7 @@ const Navbar = () => {
             <a
               key={idx}
               className="hover:text-md hover:text-white"
-              onClick={() => lenis.scrollTo(item.id)}
+              onClick={() => lenisRef.current?.scrollTo(item.id)}
             >
               {item.name}
             </a>

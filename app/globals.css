@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-ibm-plex-mono), monospace;
+}
+
+.primary-btn {
+  @apply flex justify-center items-center rounded-sm bg-formbuttoncolor border border-formbuttonbordercolor gap-3;
 }
 
 @layer base {

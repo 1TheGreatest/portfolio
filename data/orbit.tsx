@@ -128,3 +128,36 @@ const Icons = {
 };
 
 export default Icons;
+
+export const frontend = [
+  { logo: "/icons/shadcnui.png", alt: "shadcn-ui" },
+  { logo: "/icons/react.svg", alt: "react" },
+  { logo: "/icons/vite.svg", alt: "vite" },
+  { logo: "/icons/nextjs.svg", alt: "nextjs" },
+  { logo: "/icons/tailwindcss.svg", alt: "tailwindcss" },
+];
+export const backend = [
+  { logo: "/icons/node.svg", alt: "node" },
+  { logo: "/icons/express.svg", alt: "express" },
+  { logo: "/icons/flask.svg", alt: "flask" },
+  { logo: "/icons/fastapi.svg", alt: "fastapi" },
+  { logo: "/icons/payload.svg", alt: "payload" },
+];
+export const databases = [
+  { logo: "/icons/postgresql.svg", alt: "postgres" },
+  { logo: "/icons/mysql.svg", alt: "mysql" },
+  { logo: "/icons/mongodb.svg", alt: "mongo" },
+  { logo: "/icons/firebase.svg", alt: "firebase" },
+  { logo: "/icons/redis.svg", alt: "redis" },
+];
+export const others = [
+  { logo: "/icons/aws.svg", alt: "aws" },
+  { logo: "/icons/vercel.svg", alt: "vercel" },
+  { logo: "/icons/git.svg", alt: "git" },
+  { logo: "/icons/github.svg", alt: "github" },
+  { logo: "/icons/docker.svg", alt: "docker" },
+  { logo: "/icons/kubernetes.svg", alt: "kubernetes" },
+  { logo: "/icons/sentry.svg", alt: "sentry" },
+  { logo: "/icons/rabbitmq.svg", alt: "rabbitmq" },
+  { logo: "/icons/kafka.svg", alt: "kafka" },
+];
