@@ -5,9 +5,22 @@
 body {
   font-family: var(--font-ibm-plex-mono), monospace;
 }
+/* Image {
+  height: 40px;
+  width: auto;
+} */
 
 .primary-btn {
   @apply flex justify-center items-center rounded-sm bg-formbuttoncolor border border-formbuttonbordercolor gap-3;
+}
+.form-label {
+  @apply text-white font-semibold text-xs;
+}
+.form-input {
+  @apply p-3 text-xs rounded-sm fill-formfillcolor text-formfontcolor border border-formbordercolor;
+}
+.form-size {
+  @apply flex flex-col px-[8.6vw] mb-[3vh];
 }
 
 @layer base {
