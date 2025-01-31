@@ -11,7 +11,7 @@ body {
 } */
 
 .primary-btn {
-  @apply flex justify-center items-center rounded-sm bg-formbuttoncolor border border-formbuttonbordercolor gap-3;
+  @apply flex justify-center items-center rounded-sm bg-buttoncolor border border-buttonbordercolor gap-3;
 }
 .form-label {
   @apply text-white font-semibold text-xs;

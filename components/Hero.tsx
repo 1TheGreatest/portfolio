@@ -1,5 +1,5 @@
 import React from "react";
-import ClientLogo from "./client-logos";
+import ClientLogo from "./ui/client-logos";
 import { clients } from "@/data";
 import { IoIosArrowForward } from "react-icons/io";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
@@ -21,8 +21,8 @@ const Hero = () => {
         </div>
 
         <Avatar className="w-[27.3vw] h-[50vh]">
-          <AvatarImage src="solo.png" />
-          <AvatarFallback>Photo of Dev</AvatarFallback>
+          <AvatarImage src="solo.png" className="object-fill" />
+          <AvatarFallback>Dev</AvatarFallback>
         </Avatar>
       </div>
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { OrbitingCircles } from "./ui/orbiting-circles";
-import { backend, databases, frontend, others } from "@/data/orbit";
+import { backend, databases, frontend, others } from "@/data/index";
 import Image from "next/image";
 
 const Expertise = () => {

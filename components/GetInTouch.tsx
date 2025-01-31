@@ -49,6 +49,7 @@ const GetInTouch = () => {
         body: JSON.stringify({ fullname, email, message }),
       });
       if (response["status"] === 200) {
+        form.reset();
         toast({
           variant: "success",
           description: "Message sent successfully",
@@ -72,10 +73,8 @@ const GetInTouch = () => {
               Get In Touch
             </h1>
             <h3 className="text-navfontcolor text-sm mb-[5.7vh] text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              facilis adipisci reprehenderit nulla quam ratione dolorum. Ipsam
-              nisi a, quasi, sit autem, velit atque voluptatibus consectetur
-              soluta harum sapiente error.
+              Got a question or proposal, or an exciting project you need help
+              with? Go ahead.
             </h3>
             <FormField
               control={form.control}
