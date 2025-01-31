@@ -1,6 +1,8 @@
 import React from "react";
 import { experiences } from "@/data";
-import WorkCard from "./ui/work-card";
+import { IoLocationSharp } from "react-icons/io5";
+import { FaExternalLinkSquareAlt } from "react-icons/fa";
+
 import { BlurFade } from "./ui/blur-fade";
 import {
   Accordion,
@@ -9,6 +11,7 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { Badge } from "./ui/badge";
 
 const Experience = () => {
   return (
@@ -35,18 +38,51 @@ const Experience = () => {
                     </h1>
                   </div>
                 </AccordionTrigger>
+
                 <AccordionContent className="rounded-sm h-[34vh] bg-accorcontent px-6 py-2 my-2">
                   <div className="grid grid-cols-5 min-h-full gap-3">
-                    <div className="bg-green-300 col-span-4"></div>
-                    <div className="flex-none bg-red-200 mt-10">
-                      <Avatar className="size-30 m-auto">
-                        <AvatarImage
-                          src={experience.logoUrl}
-                          alt={experience.company}
-                          className="object-center"
-                        />
-                        <AvatarFallback>{experience.company[0]}</AvatarFallback>
-                      </Avatar>
+                    <div className="col-span-4 grid grid-rows-5">
+                      <div className="flex gap-2 items-center text-base text-white">
+                        <IoLocationSharp />
+                        <h1>{experience.location}</h1>
+                        <br></br>
+                        <FaExternalLinkSquareAlt />
+                        <a
+                          href={experience.href}
+                          target="_blank"
+                          rel="nofollow"
+                        >
+                          <h1>{experience.company}</h1>
+                        </a>
+                      </div>
+                      <div className="row-span-3 items-center text-base text-white">
+                        <h1>{experience.description}</h1>
+                      </div>
+                      <div className="flex gap-2 items-center">
+                        {experience.badges.map((badge, index) => (
+                          <Badge
+                            className="align-middle text-xs rounded-lg bg-buttoncolor border border-buttonbordercolor hover:bg-buttoncolor"
+                            key={index}
+                          >
+                            {badge}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="min-h-full flex items-center justify-center ">
+                      <div>
+                        <Avatar className="size-30 m-auto">
+                          <AvatarImage
+                            src={experience.logoUrl}
+                            alt={experience.company}
+                            className="object-center"
+                          />
+                          <AvatarFallback>
+                            {experience.company[0]}
+                          </AvatarFallback>
+                        </Avatar>
+                      </div>
                     </div>
                   </div>
                 </AccordionContent>
