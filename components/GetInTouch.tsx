@@ -65,8 +65,11 @@ const GetInTouch = () => {
     }
   }
   return (
-    <section id="getInTouch" className="w-full h-[96vh] bg-pageblack">
-      <div className="flex flex-col px-[27.7vw] py-[11.4vh]">
+    <section
+      id="getInTouch"
+      className="w-full px-[27.7vw] py-[11.4vh] bg-pageblack"
+    >
+      <div className="flex flex-col">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <h1 className="font-extrabold text-4xl text-white mb-[1.5vh] text-center">
@@ -108,7 +111,7 @@ const GetInTouch = () => {
                       {...field}
                     />
                   </FormControl>
-                  {/* <FormMessage /> */}
+                  <FormMessage />
                 </FormItem>
               )}
             />
@@ -127,7 +130,7 @@ const GetInTouch = () => {
                       {...field}
                     />
                   </FormControl>
-                  {/* <FormMessage /> */}
+                  <FormMessage />
                 </FormItem>
               )}
             />

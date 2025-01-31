@@ -6,8 +6,11 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 const Hero = () => {
   return (
-    <section className="w-full h-[100vh] pt-[21vh] bg-pageblack" id="home">
-      <div className="flex w-[72vw] ml-[14vw] h-[50vh] mb-[8vh] justify-between">
+    <section
+      className="w-full px-[14vw] pt-[21vh] pb-[11.4vh] bg-pageblack"
+      id="home"
+    >
+      <div className="flex mb-14 justify-between">
         <div className="grid grid-rows-3 w-[42vw] h-[35vh] mt-[7.4vh] gap-7">
           <div className="row-span-2 bg-red-100">Name</div>
           <a href="#expertise">
@@ -26,9 +29,9 @@ const Hero = () => {
         </Avatar>
       </div>
 
-      <div className="w-[72vw] ml-[14vw] h-[14vh] rounded-b-lg">
-        <p className="mb-[2.5vh] text-white text-sm">Worked with</p>
-        <div className="flex gap-[2.4vw]">
+      <div>
+        <h3 className="mb-5 text-white text-sm">Worked with</h3>
+        <div className="flex gap-8">
           {clients.map((client, idx) => (
             <ClientLogo key={idx} svg={client.logo} />
           ))}

@@ -5,8 +5,11 @@ import Image from "next/image";
 
 const Expertise = () => {
   return (
-    <section id="expertise" className="w-full h-[100vh] py-[11.4vh] bg-white">
-      <div className="relative flex w-[72vw] ml-[14vw] min-h-full flex-col items-center justify-center">
+    <section
+      id="expertise"
+      className="w-full h-[100vh] px-[14vw] py-[11.4vh] bg-white"
+    >
+      <div className="relative flex flex-col min-h-full items-center justify-center">
         <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
           Expertise
         </span>
