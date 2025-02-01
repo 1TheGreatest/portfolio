@@ -16,7 +16,7 @@ import { Badge } from "./ui/badge";
 const Experience = () => {
   return (
     <section id="experience" className="w-full px-[14vw] py-[11.4vh] bg-white">
-      <div className="flex flex-col items-center ">
+      <div className="flex flex-col items-center">
         <h1 className="font-extrabold text-4xl text-pageblack mb-[5.5vh] text-center">
           Professional Experience
         </h1>
@@ -87,6 +87,8 @@ const Experience = () => {
             </BlurFade>
           ))}
         </Accordion>
+
+        <div className="flex bg-red-100 w-[57vw] justify-end">home</div>
       </div>
     </section>
   );
