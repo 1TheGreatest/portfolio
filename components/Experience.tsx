@@ -2,7 +2,7 @@ import React from "react";
 import { experiences } from "@/data";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaExternalLinkSquareAlt } from "react-icons/fa";
-
+import { MdNorthEast } from "react-icons/md";
 import { BlurFade } from "./ui/blur-fade";
 import {
   Accordion,
@@ -88,7 +88,22 @@ const Experience = () => {
           ))}
         </Accordion>
 
-        <div className="flex bg-red-100 w-[57vw] justify-end">home</div>
+        <div className="flex w-[57vw] justify-end items-center group relative pr-2">
+          <a
+            href="resume.pdf"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="View Full Résumé (opens in a new tab)"
+          >
+            <h3 className="text-base text-pageblack cursor-pointer">
+              <span className="relative">
+                View Full Résumé
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-green-500 transition-all duration-300 group-hover:w-full"></span>
+              </span>
+            </h3>
+          </a>
+          <MdNorthEast color="black" />
+        </div>
       </div>
     </section>
   );
