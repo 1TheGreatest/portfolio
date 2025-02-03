@@ -107,9 +107,8 @@ const Projects = () => {
         <div className="flex p-4 justify-end items-center group relative pr-2">
           <a
             href="/archive"
-            target="_blank"
             rel="noreferrer noopener"
-            aria-label="View Full Résumé (opens in a new tab)"
+            aria-label="View Full Project Archive"
           >
             <h3 className="text-base text-white cursor-pointer">
               <span className="relative">
