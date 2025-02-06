@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/Users/thegreatest/Desktop/100DAYS/Full-Stack Journey/Projects/my_portfolio/sum.test.ts">
+    <testCase name="sum module adds 1 + 2 to equal 3" duration="2"/>
+  </file>
+</testExecutions>
