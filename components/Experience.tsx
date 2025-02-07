@@ -23,8 +23,8 @@ const Experience = () => {
 
         <Accordion type="single" collapsible className="w-[57vw]">
           {experiences.map((experience, id) => (
-            <BlurFade key={experience.company} delay={0.04 * 6 + id * 0.05}>
-              <AccordionItem value={experience.company} className="mb-2">
+            <BlurFade key={id} delay={0.04 * 6 + id * 0.05}>
+              <AccordionItem value={id.toString()} className="mb-2">
                 <AccordionTrigger className="rounded-sm px-8 py-5 bg-trigger data-[state=open]:bg-triggersecondary transition-all hover:no-underline ">
                   <div className="flex w-[48vw] items-center justify-between text-lg text-white font-bold">
                     <h1>
@@ -38,7 +38,7 @@ const Experience = () => {
 
                 <AccordionContent className="rounded-sm bg-accorcontent px-6 py-4 my-2">
                   <div className="grid grid-cols-5 gap-3">
-                    <div className="col-span-4 grid grid-rows-5">
+                    <div className="col-span-4 grid grid-rows-4">
                       <div className="flex gap-2 items-center text-base text-white">
                         <IoLocationSharp />
                         <h1>{experience.location}</h1>
@@ -53,9 +53,11 @@ const Experience = () => {
                         </a>
                       </div>
                       <div className="row-span-3 items-center text-base text-white">
-                        <h1>{experience.description}</h1>
+                        {experience.descriptions?.map((description, index) => (
+                          <h1 key={index}>- {description}</h1>
+                        ))}
                       </div>
-                      <div className="flex gap-2 items-center">
+                      <div className="flex flex-wrap gap-2 py-2 items-center">
                         {experience.badges.map((badge, index) => (
                           <Badge
                             className="align-middle text-xs rounded-lg bg-buttoncolor border border-buttonbordercolor hover:bg-buttoncolor"
