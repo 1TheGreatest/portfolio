@@ -12,7 +12,18 @@ const Hero = () => {
     >
       <div className="flex mb-14 justify-between">
         <div className="grid grid-rows-3 w-[42vw] h-[35vh] mt-[7.4vh] gap-7">
-          <div className="row-span-2 bg-red-100">Name</div>
+          <div className="row-span-2">
+            <h1 className="font-extrabold text-5xl text-white mb-2">
+              Hi, I&apos;m Solomon 👋
+            </h1>
+            <h3 className="text-navfontcolor text-sm">
+              I&apos;m a full-stack developer with experience building dynamic
+              web applications, from designing scalable backends with Python and
+              Node.js to crafting intuitive frontends with React and Next.js. I
+              have a master&apos;s degree in Artificial Intelligence and Data
+              Science and keen interest in using AI to solve complex problems.
+            </h3>
+          </div>
           <a href="#expertise">
             <button className="primary-btn w-[24vw] h-[7.2vh]">
               <p className="text-base text-white font-bold">
