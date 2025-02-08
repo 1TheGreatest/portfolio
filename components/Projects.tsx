@@ -22,7 +22,7 @@ const Projects = () => {
         </h3>
 
         <div className="grid grid-cols-2 gap-4 ">
-          {projects.map((project, id) => (
+          {projects.slice(0, 4).map((project, id) => (
             <div key={project.title} className="flex h-full justify-center">
               <BlurFade key={project.title} delay={0.04 * 12 + id * 0.05}>
                 <Card
@@ -105,7 +105,7 @@ const Projects = () => {
         </div>
 
         <div className="flex p-4 justify-end items-center group relative pr-2">
-          <a
+          <Link
             href="/archive"
             rel="noreferrer noopener"
             aria-label="View Full Project Archive"
@@ -116,7 +116,7 @@ const Projects = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-green-500 transition-all duration-300 group-hover:w-full"></span>
               </span>
             </h3>
-          </a>
+          </Link>
           <MdNorthEast color="white" />
         </div>
       </div>
