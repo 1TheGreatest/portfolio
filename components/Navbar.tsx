@@ -3,6 +3,10 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import Lenis from "lenis";
 import { navItems } from "@/data";
+import { LuMenu } from "react-icons/lu";
+import Github from "./ui/github";
+import LinkedIn from "./ui/linkedIn";
+import Instagram from "./ui/instagram";
 
 const Navbar = () => {
   // Initialize Lenis
@@ -26,12 +30,12 @@ const Navbar = () => {
 
   return (
     <section className="fixed w-full h-[10vh] bg-pageblack z-50">
-      <div className="flex w-[86vw] ml-[6.6vw] h-[10vh] bg-navcolor rounded-b-lg items-center">
-        <div className="flex ml-[7.4vw] w-[56vw] h-[2.6vh] text-navfontcolor text-sm justify-between">
+      <div className="flex w-[86vw] ml-[6.6vw] h-[10vh] bg-navcolor rounded-b-lg items-center justify-between">
+        <div className="hidden md:flex ml-[7.4vw] w-[56vw] h-[3.6vh] items-center justify-between">
           {navItems.map((item, idx) => (
             <a
               key={idx}
-              className="hover:text-md hover:text-white"
+              className="text-navfontcolor text-sm hover:text-md hover:text-white"
               onClick={() => lenisRef.current?.scrollTo(item.id)}
             >
               {item.name}
@@ -39,9 +43,13 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="flex ml-[7.4vw] w-[8.4vw] h-[2.6vh] justify-between">
+        <div className="flex md:hidden ml-[7.4vw] w-[56vw] h-[3.6vh] items-center">
+          <LuMenu className="text-navfontcolor hover:text-slate-200 text-2xl" />
+        </div>
+
+        <div className="flex px-4 gap-4 h-[3.6vh] items-center">
           <a
-            className="hover:text-slate-200"
+            className="text-navfontcolor hover:text-slate-200"
             href="https://www.linkedin.com/in/solomon-ampomah-a67128141/"
             target="_blank"
             rel="noreferrer noopener"
@@ -49,15 +57,10 @@ const Navbar = () => {
             title="linkedIn"
           >
             <span className="sr-only">LinkedIn</span>
-            <Image
-              src="/icons/linkedin.svg"
-              alt="linkedIn"
-              width={24}
-              height={24}
-            />
+            <LinkedIn />
           </a>
           <a
-            className="hover:text-slate-200"
+            className="text-navfontcolor hover:text-slate-200"
             href="https://github.com/1TheGreatest"
             target="_blank"
             rel="noreferrer noopener"
@@ -65,19 +68,19 @@ const Navbar = () => {
             title="github"
           >
             <span className="sr-only">Github</span>
-            <Image
-              src="/icons/github.svg"
-              alt="github"
-              width={24}
-              height={24}
-            />
+            <Github />
           </a>
-          <Image
-            src="/icons/linkedin.svg"
-            alt="linkedIn"
-            width={24}
-            height={24}
-          />
+          <a
+            className="text-navfontcolor hover:text-slate-200"
+            href="https://github.com/1TheGreatest"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Github (opens in a new tab)"
+            title="github"
+          >
+            <span className="sr-only">Github</span>
+            <Instagram />
+          </a>
         </div>
       </div>
     </section>

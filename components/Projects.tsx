@@ -23,7 +23,7 @@ const Projects = () => {
 
         <div className="grid grid-cols-2 gap-4 ">
           {projects.slice(0, 4).map((project, id) => (
-            <div key={project.title} className="flex h-full justify-center">
+            <div key={id} className="flex h-full justify-center">
               <BlurFade key={project.title} delay={0.04 * 12 + id * 0.05}>
                 <Card
                   className={
