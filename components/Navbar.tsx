@@ -1,11 +1,10 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import Image from "next/image";
 import Lenis from "lenis";
 import { navItems } from "@/data";
 import { LuMenu } from "react-icons/lu";
 import Github from "./ui/github";
-import LinkedIn from "./ui/linkedIn";
+import LinkedIn from "./ui/linkedin";
 import Instagram from "./ui/instagram";
 
 const Navbar = () => {
