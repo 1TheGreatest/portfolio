@@ -11,23 +11,23 @@ import { MdNorthEast } from "react-icons/md";
 
 const Projects = () => {
   return (
-    <section id="projects" className="w-full px-[14vw] py-[11.4vh] bg-black">
+    <section id="projects" className="w-full px-[14vw] py-[11vh] bg-black">
       <div className="flex flex-col">
-        <h1 className="font-extrabold text-4xl text-white mb-[1.5vh] text-center">
+        <h1 className="font-extrabold text-lg sm:text-xl md:text-2xl lg:text-4xl text-white mb-3 text-center">
           Projects
         </h1>
-        <h3 className="text-navfontcolor text-sm mb-[5.7vh] text-center">
+        <h3 className="text-navfontcolor text-xs md:text-sm mb-10 text-center">
           I&apos;ve worked on a variety of projects, from simple websites to
           complex web applications. Here are a few of my favorites.
         </h3>
 
-        <div className="grid grid-cols-2 gap-4 ">
+        <div className="grid md:grid-cols-2 gap-4 ">
           {projects.slice(0, 4).map((project, id) => (
             <div key={id} className="flex h-full justify-center">
               <BlurFade key={project.title} delay={0.04 * 12 + id * 0.05}>
                 <Card
                   className={
-                    "flex flex-col w-[30vw] h-full overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out"
+                    "flex flex-col w-[17rem] md:w-56 lg:w-[19rem] xl:w-[24rem] h-full overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out"
                   }
                 >
                   <Link
@@ -55,7 +55,7 @@ const Projects = () => {
                   </Link>
                   <CardHeader>
                     <div className="space-y-1">
-                      <CardTitle className="mt-1 text-base">
+                      <CardTitle className="mt-1 sm:text-sm md:text-base">
                         {project.title}
                       </CardTitle>
                       <time className="font-sans text-xs">{project.dates}</time>
@@ -71,7 +71,7 @@ const Projects = () => {
                           {project.iconLists?.map((icon, index) => (
                             <div
                               key={index}
-                              className="border border-black/[.2] rounded-full lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                              className="border border-black/[.2] rounded-full w-6 h-6 sm:w-7 sm:h-7 md:w-5 md:h-5 lg:w-8 lg:h-8 flex justify-center items-center"
                               style={{
                                 transform: `translateX(-${5 * index + 2}px)`,
                               }}
@@ -79,9 +79,8 @@ const Projects = () => {
                               <Image
                                 src={icon}
                                 alt="icon5"
-                                className="p-2"
-                                width={32}
-                                height={32}
+                                className="p-1"
+                                fill
                               />
                             </div>
                           ))}
@@ -89,7 +88,7 @@ const Projects = () => {
 
                         <div className="">
                           <Link href={project.link} target="_blank">
-                            <Badge className="flex gap-2 px-2 py-1 text-[12px]">
+                            <Badge className="flex gap-1 px-2 py-1 text-xs">
                               <CiGlobe />
                               Website
                             </Badge>
@@ -110,7 +109,7 @@ const Projects = () => {
             rel="noreferrer noopener"
             aria-label="View Full Project Archive"
           >
-            <h3 className="text-base text-white cursor-pointer">
+            <h3 className="text-xs md:text-base text-white cursor-pointer">
               <span className="relative">
                 View Full Project Archive
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-green-500 transition-all duration-300 group-hover:w-full"></span>

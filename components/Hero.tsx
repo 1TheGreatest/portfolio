@@ -28,7 +28,7 @@ const Hero = () => {
 
           <a href="#expertise">
             <button className="primary-btn px-14 py-3">
-              <p className="text-base text-white font-bold">
+              <p className="text-xs md:text-base text-white font-bold">
                 Let’s get started
               </p>
               <IoIosArrowForward color="white" />
@@ -45,8 +45,8 @@ const Hero = () => {
       </div>
 
       <div>
-        <h3 className="mt-14 mb-5 text-white text-sm">Worked with</h3>
-        <div className="flex gap-8">
+        <h3 className="mt-5 md:mt-14 mb-5 text-white text-sm">Worked with</h3>
+        <div className="flex gap-x-1 sm:gap-x-8">
           {clients.map((client, idx) => (
             <ClientLogo key={idx} svg={client.logo} />
           ))}
