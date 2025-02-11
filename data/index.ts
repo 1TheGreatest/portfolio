@@ -68,7 +68,7 @@ export const experiences = [
     position: "Application Engineer",
     logoUrl: "invisible.png",
     start: "2022",
-    end: "Current",
+    end: "Now",
     descriptions: [
       "Designed and implemented robust, scalable web applications using TypeScript, NextJS, and React, following modern JavaScript best practices to ensure high code quality and maintainability.",
       "Spearheaded the development and maintenance of a monorepo structure with micro frontends using NX Workspaces, streamlining cross-team collaboration and accelerating feature delivery.",
@@ -94,7 +94,7 @@ export const experiences = [
     ],
     href: "https://www.quantumgroupgh.com/",
     location: "GHANA",
-    position: "Software Engineer (Team Lead)",
+    position: "Software Engineer (Lead)",
     logoUrl: "quantum.png",
     start: "2021",
     end: "2022",
@@ -165,7 +165,8 @@ export const projects = [
     image: "/solo.png",
     video:
       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
-  },{
+  },
+  {
     title: "Chat Collect",
     href: "https://chatcollect.com",
     dates: "Jan 2024 - Feb 2024",
