@@ -17,7 +17,7 @@ body {
   @apply text-white font-semibold text-xs;
 }
 .form-input {
-  @apply p-3 text-xs rounded-sm fill-formfillcolor text-formfontcolor border border-formbordercolor;
+  @apply p-3 text-[0.65rem] sm:text-xs rounded-sm fill-formfillcolor text-formfontcolor border border-formbordercolor;
 }
 .form-size {
   @apply flex flex-col px-[8.6vw] mb-[3vh];

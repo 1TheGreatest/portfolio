@@ -67,15 +67,15 @@ const GetInTouch = () => {
   return (
     <section
       id="getInTouch"
-      className="w-full px-[27.7vw] py-[11.4vh] bg-pageblack"
+      className="w-full px-[18vw] md:px-[27.7vw] py-[11.4vh] bg-pageblack"
     >
       <div className="flex flex-col">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
-            <h1 className="font-extrabold text-4xl text-white mb-[1.5vh] text-center">
+            <h1 className="font-extrabold text-lg sm:text-xl md:text-2xl lg:text-4xl text-white mb-3 text-center">
               Get In Touch
             </h1>
-            <h3 className="text-navfontcolor text-sm mb-[5.7vh] text-center">
+            <h3 className="text-navfontcolor text-xs md:text-sm mb-10 text-center">
               Got a question or proposal, or an exciting project you need help
               with? Go ahead.
             </h3>
@@ -136,7 +136,7 @@ const GetInTouch = () => {
             />
             <div className="flex flex-col px-[8.6vw] ">
               <Button
-                className="primary-btn h-[7.2vh]"
+                className="primary-btn h-12"
                 type="submit"
                 disabled={isLoading}
               >
