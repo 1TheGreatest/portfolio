@@ -71,11 +71,11 @@ const Navbar = () => {
           </a>
           <a
             className="text-navfontcolor hover:text-slate-200"
-            href="https://github.com/1TheGreatest"
+            href="https://www.instagram.com/solo_thegreatest?igsh=ZmNuNDVoaWd0Z29i&utm_source=qr"
             target="_blank"
             rel="noreferrer noopener"
-            aria-label="Github (opens in a new tab)"
-            title="github"
+            aria-label="Instagram (opens in a new tab)"
+            title="instagram"
           >
             <span className="sr-only">Github</span>
             <Instagram />

@@ -7,11 +7,11 @@ export const navItems = [
 ];
 
 export const clients = [
-  { logo: "clickup.svg" },
-  { logo: "clickup.svg" },
-  { logo: "clickup.svg" },
-  { logo: "clickup.svg" },
-  { logo: "clickup.svg" },
+  { logo: "appwrite.svg" },
+  { logo: "supabase-dark.svg" },
+  { logo: "clerk.png" },
+  { logo: "nx-workspaces.png" },
+  { logo: "stripe.svg" },
 ];
 
 export const frontend = [
