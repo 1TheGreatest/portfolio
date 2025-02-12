@@ -8,9 +8,9 @@ export const navItems = [
 
 export const clients = [
   { logo: "appwrite.svg" },
-  { logo: "supabase-dark.svg" },
-  { logo: "clerk.png" },
-  { logo: "nx-workspaces.png" },
+  { logo: "supabase.svg" },
+  { logo: "clerk.svg" },
+  { logo: "payload_text.svg" },
   { logo: "stripe.svg" },
 ];
 
