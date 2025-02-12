@@ -1,8 +1,8 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Lenis from "lenis";
 import { navItems } from "@/data";
-import { LuMenu } from "react-icons/lu";
+import { LuMenu, LuX } from "react-icons/lu";
 import Github from "./ui/github";
 import LinkedIn from "./ui/linkedin";
 import Instagram from "./ui/instagram";
@@ -27,9 +27,12 @@ const Navbar = () => {
     };
   }, []);
 
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <section className="fixed w-full h-[10vh] bg-pageblack z-50">
+    <section className="fixed w-full h-[10vh] bg-pageblack z-50 top-0 start-0">
       <div className="flex w-[86vw] ml-[6.6vw] h-[10vh] bg-navcolor rounded-b-lg items-center justify-between">
+        {/* Desktop Navigation */}
         <div className="hidden md:flex ml-[7.4vw] w-[56vw] h-[3.6vh] items-center justify-between">
           {navItems.map((item, idx) => (
             <a
@@ -42,10 +45,18 @@ const Navbar = () => {
           ))}
         </div>
 
+        {/* Mobile Menu Button */}
         <div className="flex md:hidden ml-[7.4vw] w-[56vw] h-[3.6vh] items-center">
-          <LuMenu className="text-navfontcolor hover:text-slate-200 text-2xl" />
+          <button onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? (
+              <LuX className="text-navfontcolor hover:text-slate-200 text-2xl" />
+            ) : (
+              <LuMenu className="text-navfontcolor hover:text-slate-200 text-2xl" />
+            )}
+          </button>
         </div>
 
+        {/* Social Links */}
         <div className="flex px-4 gap-4 h-[3.6vh] items-center">
           <a
             className="text-navfontcolor hover:text-slate-200"
@@ -82,6 +93,27 @@ const Navbar = () => {
           </a>
         </div>
       </div>
+
+      {/* Mobile Navigation Menu */}
+      {isOpen && (
+        <div className="md:hidden absolute top-[10vh] left-[6.6vw] w-[86vw] bg-navcolor rounded-b-lg shadow-md">
+          <ul className="flex flex-col items-center py-4 space-y-4">
+            {navItems.map((item, idx) => (
+              <li key={idx}>
+                <a
+                  className="text-navfontcolor text-sm hover:text-md hover:text-white"
+                  onClick={() => {
+                    lenisRef.current?.scrollTo(item.id);
+                    setIsOpen(false); // Close menu on click
+                  }}
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </section>
   );
 };
