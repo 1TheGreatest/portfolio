@@ -11,8 +11,8 @@ const Hero = () => {
       className="w-full px-[14vw] pt-[21vh] pb-[11.4vh] bg-pageblack"
       id="home"
     >
-      <div className="grid grid-cols-3 ">
-        <div className="col-span-3 md:col-span-2 grid grid-rows-3 gap-7">
+      <div className="grid grid-cols-3 2xl:grid-cols-[2.5fr_0.5fr]">
+        <div className="col-span-3 md:col-span-2 2xl:col-span-1 grid grid-rows-3 gap-7">
           <div className="row-span-2 md:pr-6 md:pt-10">
             <h1 className="font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-2">
               Hi, I&apos;m Solomon 👋
@@ -36,8 +36,8 @@ const Hero = () => {
           </a>
         </div>
 
-        <div className="hidden md:block rounded-full">
-          <Avatar className="min-h-full min-w-full">
+        <div className="hidden md:block">
+          <Avatar className="min-h-full min-w-full md:rounded-md lg:rounded-full 2xl:rounded-lg">
             <AvatarImage src="solo.png" className="object-fill" />
             <AvatarFallback>Dev</AvatarFallback>
           </Avatar>
@@ -46,7 +46,7 @@ const Hero = () => {
 
       <div>
         <h3 className="mt-5 md:mt-14 mb-5 text-white text-sm">Worked with</h3>
-        <div className="flex gap-x-1 sm:gap-x-8">
+        <div className="flex gap-x-1 sm:gap-x-8 lg:gap-x-2 xl:gap-x-8">
           {clients.map((client, idx) => (
             <ClientLogo key={idx} svg={client.logo} />
           ))}

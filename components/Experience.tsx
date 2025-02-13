@@ -115,7 +115,7 @@ const Experience = () => {
 
         <div className="flex w-[60vw] justify-end items-center group relative pr-2">
           <a
-            href="resume.pdf"
+            href="ResumeFS.pdf"
             target="_blank"
             rel="noreferrer noopener"
             aria-label="View Full Résumé (opens in a new tab)"
