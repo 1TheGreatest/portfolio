@@ -11,7 +11,7 @@ const plex_mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Solomon Ampomah",
+  title: "Solomon Ampomah - Full Stack Software Engineer & Web Developer",
   description: "FullStack Developer Portfolio",
 };
 
