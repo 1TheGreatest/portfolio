@@ -162,7 +162,7 @@ export const projects = [
     link: "https://sky-vault-six.vercel.app/",
     image:
       "https://cloud.appwrite.io/v1/storage/buckets/6796ca2700157ae56858/files/67b54d87002c49bdd565/view?project=6796c5f0001c5bc7af58",
-    video: "",
+    video: "https://sampomahdev.com/skyvault.mp4",
   },
   {
     title: "llm.report",
