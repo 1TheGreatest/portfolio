@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { OrbitingCircles } from "./ui/orbiting-circles";
 import { backend, databases, frontend, others } from "@/data/index";
