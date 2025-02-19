@@ -15,7 +15,7 @@ export const clients = [
 ];
 
 export const frontend = [
-  { logo: "/icons/shadcnui.png", alt: "shadcn-ui" },
+  { logo: "/icons/shadcn.svg", alt: "shadcn-ui" },
   { logo: "/icons/react.svg", alt: "react" },
   { logo: "/icons/vite.svg", alt: "vite" },
   { logo: "/icons/nextjs.svg", alt: "nextjs" },
@@ -160,7 +160,8 @@ export const projects = [
       "/icons/shadcn.svg",
     ],
     link: "https://sky-vault-six.vercel.app/",
-    image: "/skyVault.png",
+    image:
+      "https://cloud.appwrite.io/v1/storage/buckets/6796ca2700157ae56858/files/67b54d87002c49bdd565/view?project=6796c5f0001c5bc7af58",
     video: "",
   },
   {
