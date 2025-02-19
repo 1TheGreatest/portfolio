@@ -10,16 +10,6 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  images: {
-    formats: ["image/avif", "image/webp"],
-    domains: ["cloud.appwrite.io"],
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "cloud.appwrite.io",
-      },
-    ],
-  },
 };
 
 export default withSentryConfig(
