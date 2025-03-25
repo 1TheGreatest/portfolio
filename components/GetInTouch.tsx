@@ -48,6 +48,7 @@ const GetInTouch = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ fullname, email, message }),
       });
+
       if (response["status"] === 200) {
         form.reset();
         toast({

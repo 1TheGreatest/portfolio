@@ -138,6 +138,38 @@ export const experiences = [
 
 export const projects = [
   {
+    title: "SavvyCent",
+    href: "https://savvy-cent.vercel.app/",
+    dates: "Feb 2025 - Feb 2025",
+    active: true,
+    description:
+      "A modern finance management platform built with React, Next.js, and TailwindCSS, it enables users to track income and expenses across multiple accounts with AI-powered receipt extraction (OpenAI API) and smart categorization. Features include recurring transactions, spending alerts, interactive financial visualizations (Recharts), and AI-generated monthly reports. The platform leverages Prisma + PostgreSQL (Supabase) for data management, Clerk for authentication, Arcjet for rate limiting and bot protection, and Inngest for automated financial tasks.",
+    technologies: [
+      "Next.js",
+      "React",
+      "Typescript",
+      "Supabase",
+      "TailwindCSS",
+      "Prisma",
+      "Clerk",
+      "OpenAI",
+      "Arcjet",
+      "Inngest",
+      "Recharts",
+    ],
+    iconLists: [
+      "/icons/nextjs.svg",
+      "/icons/react.svg",
+      "/icons/supabase-sm.svg",
+      "/icons/tailwindcss.svg",
+      "/icons/prisma-sm.svg",
+      "/icons/chatgpt-sm.svg",
+    ],
+    link: "https://savvy-cent.vercel.app/",
+    image: "",
+    video: "https://sampomahdev.com/savvy.mp4",
+  },
+  {
     title: "SkyVault",
     href: "https://sky-vault-six.vercel.app/",
     dates: "Nov 2024 - Dec 2024",
@@ -163,28 +195,7 @@ export const projects = [
     image: "",
     video: "https://sampomahdev.com/skyvault.mp4",
   },
-  {
-    title: "llm.report",
-    href: "https://llm.report",
-    dates: "April 2023 - September 2023",
-    active: true,
-    description:
-      "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
-    technologies: [
-      "Next.js",
-      "Typescript",
-      "PostgreSQL",
-      "Prisma",
-      "TailwindCSS",
-      "Shadcn UI",
-      "Magic UI",
-      "Stripe",
-      "Cloudflare Workers",
-    ],
-    link: "https://chatcollect.com",
-    image: "",
-    video: "https://cdn.llm.report/openai-demo.mp4",
-  },
+
   {
     title: "Automatic Chat",
     href: "https://automatic.chat",
